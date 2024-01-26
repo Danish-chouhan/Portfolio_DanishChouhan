@@ -100,7 +100,7 @@ header a:hover{
     transition: 0.3s ease-in-out;
 }
 .smallWidth{
-    background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSC2PyYfc-ZkB5vKtFhdLJxqF95AqIEY0GXjg&usqp=CAU");
+    background-image: url("../img/EXP/bg.jpeg");
     background-size: contain;
     font-family: "Poor Story", system-ui;
     font-weight: 400;

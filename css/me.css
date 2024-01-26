@@ -4,7 +4,7 @@
     padding: 0;
 }
 body{
-    background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSC2PyYfc-ZkB5vKtFhdLJxqF95AqIEY0GXjg&usqp=CAU");
+    background-image: url("../img/EXP/bg.jpeg");
     background-repeat:repeat-y;
     background-size: contain;
     font-family: "Poor Story", system-ui;
