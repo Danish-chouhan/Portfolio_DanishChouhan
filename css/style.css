@@ -1,0 +1,126 @@
+@import url('https://fonts.googleapis.com/css2?family=Poor+Story&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSC2PyYfc-ZkB5vKtFhdLJxqF95AqIEY0GXjg&usqp=CAU");
+    background-repeat:repeat-y;
+    background-size: contain;
+    font-family: "Poor Story", system-ui;
+    font-weight: 400;
+    font-style: normal;
+}
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 40px;
+    font-size: 20px;
+    margin: 10px 30px;
+}
+.headerImg{
+    font-size: 27px;
+}
+header a{
+    color: rgba(255, 255, 255, 0.61);
+    text-decoration: none;
+    font-size: 23px;
+}
+.name{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header a:hover{
+    color: white;
+    transition: 0.4s ease-in-out;
+}
+.firstPage {
+    height: 800px;    
+    display: flex;
+    align-items: start;
+    justify-content: center;
+}
+.firstPage h1{
+    text-shadow: 2px 5px 0px rgb(0, 0, 0);
+    margin: 190px 0 0 0;
+    color: rgba(255, 255, 255, 0.685);
+    font-size: 190px;
+    letter-spacing: 30px;
+    font-weight: 100;
+    text-decoration: none;
+}
+.EXP-1{
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    flex-direction: column;
+    opacity: 0.7;
+    height: 1200px;
+    position: relative;
+    color: rgba(255, 255, 255, 0.979);
+}
+.EXP-1 img{
+   height: 600px;
+}
+.EXP-1 a{
+    color: rgba(255, 255, 255, 0.685);
+  font-size: 30px;
+  margin-top: 20px;
+    text-decoration: none;
+}
+.EXP-1 a:hover{
+   color: white;
+   transition: 0.3s ease-in-out;
+}
+.EXP-1 p{
+    text-shadow: 2px 5px 0px rgb(0, 0, 0);
+    font-size: 25px;
+    letter-spacing: 2px;
+    line-height: 40px;
+    text-align: justify;
+    margin:20px 160px ;
+}
+.next{
+    font-size: 70px;
+   display: flex;
+   justify-content: center;
+   height: 400px;
+   align-items: start;
+}
+.next a{
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.418);
+}
+.next a:hover{
+    text-decoration: none;
+    color: white;
+    transition: 0.3s ease-in-out;
+}
+.smallWidth{
+    background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSC2PyYfc-ZkB5vKtFhdLJxqF95AqIEY0GXjg&usqp=CAU");
+    background-size: contain;
+    font-family: "Poor Story", system-ui;
+    font-weight: 400;
+    height: 100vh;
+    width: 100%;
+    font-style: normal;
+}
+.smallWidth div{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.smallWidth h1{
+    font-size: 250px;
+    color: rgba(255, 255, 255, 0.418);
+}
+.smallWidth p{
+    font-size: 30px;
+    color: rgba(255, 255, 255, 0.418);
+}

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PortFolio</title>
+    <link rel="stylesheet" href="./css/style.css">
+<body>     
+</body>
+<script>
+function adjustLayout() {
+            if (window.innerWidth < 1130) {
+                document.querySelector("header").remove();
+                document.querySelector("main").remove();
+                const main = document.createElement("main");
+                main.setAttribute("class", "smallWidth");
+                const container = document.createElement("div");
+                container.setAttribute("class", "miniContainer");
+                const h1Small = document.createElement("h1");
+                h1Small.innerText = "☺";
+                const pSmall = document.createElement("p");
+                pSmall.innerText = "Please switch to a larger display.";
+                container.append(h1Small, pSmall);
+                main.append(container);
+                document.body.append(main);
+            }else{
+                document.body.innerHTML = `
+                <header>
+        <a class="name" id="name" href="./html/me.html">Danish chouhan <span class="headerImg">☺</span></a>
+        <a href="./index.html">EXP WORK</a>
+        <a href="https://github.com/Danish-chouhan">X-TRA PROJECTS</a>
+        <a href="./html/me.html">WHO AM I?</a>
+    </header>
+    <main>
+        <div class="firstPage"><h1>↓↓↓</h1></div>
+        <div id="EXP-1"class="EXP-1"><img src="./img/EXP/Default.svg" alt="">
+        <h1>Dreampotential-org</h1>
+        <p>I was employed as a Full Stack Developer at the company, where my responsibilities primarily revolved around UI ,JS, Node.js, Express.js, database management and with the help of (RnD) i learned alot and work with Python and Framworks. Additionally, I led a team of nine individuals within the organization.</p>
+       <a href="https://dreampotential.org/">Visit to https://dreampotential.org/</a>    
+    </div>
+        <div class="EXP-1"><img src="./img/EXP/exp2.svg" alt="">
+            <h1>RealtorStat AI Management</h1>
+            <p>In this company, I worked on AI APIs, specifically developing AI prompts for RealtotStat, enabling individuals to generate paragraphs from their ideas without any manual input. Additionally, I was tasked with hiring new personnel for the company.</p>
+            <a href="http://v2.realtorstat.com/">Visit to http://v2.realtorstat.com/</a>
+    </div>
+        <div class="next"><a href="https://github.com/Danish-chouhan">MORE  ↗</a></div>
+    </main>
+                `
+            }
+        }
+        adjustLayout();
+        window.addEventListener("resize", adjustLayout);
+</script>
+</html>
