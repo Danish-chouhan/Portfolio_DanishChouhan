@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,103 +8,234 @@
     <link rel="stylesheet" href="../css/me.css">
     <link rel="stylesheet" href="../css/style.css">
 </head>
+
 <body>
 
 </body>
 <script>
-
     function adjustLayout() {
-                if (window.innerWidth < 1130) {
-                    document.querySelector("header").remove();
-                    document.querySelector("main").remove();
-                    const main = document.createElement("main");
-                    main.setAttribute("class", "smallWidth");
-                    const container = document.createElement("div");
-                    container.setAttribute("class", "miniContainer");
-                    const h1Small = document.createElement("h1");
-                    h1Small.innerText = "☺";
-                    const pSmall = document.createElement("p");
-                    pSmall.innerText = "Please switch to a larger display.";
-                    container.append(h1Small, pSmall);
-                    main.append(container);
-                    document.body.append(main);
-                }else{
-                    document.body.innerHTML = `
-                    <header>
-        <a class="name" href="./me.html">Danish Chouhan <span class="headerImg">☺</span></a>
-        <a href="../index.html">EXP WORK</a>
-        <a href="https://github.com/Danish-chouhan">X-TRA PROJECTS</a>
-        <a href="./me.html">WHO AM I?</a>
-    </header>
-    
-    <main>
-        <div class="IMGS">
-            <img src="../img/EXP/Desktop - 2 (1).svg" alt="">
-        </div>
-      <div class="firstIntro">
-        <div class="INTRO">
-            <p>HI THERE, I'M Danish chouhan</p>
-            <p class="discribeMySelf">From writing music to designing micro-interactions, I love spending my time crafting delight. On the weekends, you’ll find me purusing the local ramen bar — Don’t hesitate to stop by and say hi!</p>
-        </div>
-        <div class="Details">
-            <a href="../resume/Danish-Resume (2).pdf">Resume</a>
-            <a href="https://www.linkedin.com/in/danish-chouhan-623aaa24b/">LINKEDIN</a>
-            <a href="https://mail.google.com/mail/u/0/?fs=1&tf=cm&source=mailto&to=danishchouhan41@gmail.com">E-Mail</a>
-            <a href="https://twitter.com/Danish_chouhan0">Twitter</a>
-            <a href="https://www.instagram.com/danishchouhan_06/">INSTAGRAM</a>
-        </div>
-      </div>
-      <div class="secondIntro">
-        <div class="education">
-            <p>EDUCATION</p>
-            <p class="arrow">→</p>
-        </div>
-        <div class="Detailing">
-         <p>Moulana azad University Jodhpur</p>
-         <div class="works">
-            <p>Dreampotential</p>
-            <p>Full Stack</p>
-            <p>2022-23</p>
-         </div>
-        </div>
-        <div class="Work">
-            <p class="arrow">←</p>
-            <p>WORK</p>
-        </div>
-      </div>
-      <div class="data2">
-        <div class="education2">
-            <p class="arrow">⤥</p>
-        </div>
-        <div class="Detailing2">
-         <p>12th Science Maths</p>
-         <div class="works2">
-            <p>realTorStat</p>
-            <p>Full Stack</p>
-            <p>Jan-2023-December-2023</p>
-         </div>
-        </div>
-        <div class="Work2">
-            <p class="arrow">⤦</p>
-        </div>
-      </div>
-      
-      <div class="data3">
-        <div class="skills">
-            <p>Skills</p>
-            <p class="arrow">→</p>
-        </div>
-        <div class="Detailing3">
-         <p>HTML5 , CSS3 , FlexBox, Grid, Bootstrap, TailWind, JavaScript, NodeJs, Express, Mysql, sql, MongoDB, SQlite  </p>
-        </div>
-      </div>
-      <div class="Privius"><a href="../index.html">↖ EXP</a></div>
-    </main>
-                    `
-                }
-            }
-    
-            adjustLayout();
-            window.addEventListener("resize", adjustLayout);
-    </script>
+        if (window.innerWidth < 1130) {
+            document.querySelector("header").remove();
+            document.querySelector("main").remove();
+            const main = document.createElement("main");
+            main.setAttribute("class", "smallWidth");
+            const container = document.createElement("div");
+            container.setAttribute("class", "miniContainer");
+            const h1Small = document.createElement("h1");
+            h1Small.innerText = "☺";
+            const pSmall = document.createElement("p");
+            pSmall.innerText = "Please switch to a larger display.";
+            container.append(h1Small, pSmall);
+            main.append(container);
+            document.body.append(main);
+        } else {
+            const header = document.createElement("header");
+
+            const nameAnchor = document.createElement("a");
+            nameAnchor.setAttribute("class", "name");
+            nameAnchor.setAttribute("href", "./me.html");
+            nameAnchor.innerText = "Danish Chouhan ";
+
+            const span = document.createElement("span");
+            span.setAttribute("class", "headerImg");
+            span.innerText = "☺";
+
+            nameAnchor.appendChild(span);
+
+            const expWorkAnchor = document.createElement("a");
+            expWorkAnchor.setAttribute("href", "../index.html");
+            expWorkAnchor.innerText = "EXP WORK";
+
+            const xtraProjectsAnchor = document.createElement("a");
+            xtraProjectsAnchor.setAttribute("href", "https://github.com/Danish-chouhan");
+            xtraProjectsAnchor.innerText = "X-TRA PROJECTS";
+
+            const whoAmIAnchor = document.createElement("a");
+            whoAmIAnchor.setAttribute("href", "./me.html");
+            whoAmIAnchor.innerText = "WHO AM I?";
+
+            header.appendChild(nameAnchor);
+            header.appendChild(expWorkAnchor);
+            header.appendChild(xtraProjectsAnchor);
+            header.appendChild(whoAmIAnchor);
+
+            document.body.appendChild(header);
+
+            const main = document.createElement("main");
+
+            const imgsDiv = document.createElement("div");
+            imgsDiv.setAttribute("class", "IMGS");
+            const img = document.createElement("img");
+            img.setAttribute("src", "../img/EXP/Desktop - 2 (1).svg");
+            img.setAttribute("alt", "");
+            imgsDiv.appendChild(img);
+
+            const firstIntroDiv = document.createElement("div");
+            firstIntroDiv.setAttribute("class", "firstIntro");
+
+            const introDiv = document.createElement("div");
+            introDiv.setAttribute("class", "INTRO");
+            const introP1 = document.createElement("p");
+            introP1.innerText = "HI THERE, I'M Danish chouhan";
+            const introP2 = document.createElement("p");
+            introP2.setAttribute("class", "discribeMySelf");
+            introP2.innerText = "From writing music to designing micro-interactions, I love spending my time crafting delight. On the weekends, you’ll find me purusing the local ramen bar — Don’t hesitate to stop by and say hi!";
+            introDiv.appendChild(introP1);
+            introDiv.appendChild(introP2);
+
+            const detailsDiv = document.createElement("div");
+            detailsDiv.setAttribute("class", "Details");
+            const resumeAnchor = document.createElement("a");
+            resumeAnchor.setAttribute("href", "../resume/Danish-Resume (2).pdf");
+            resumeAnchor.innerText = "Resume";
+            const linkedinAnchor = document.createElement("a");
+            linkedinAnchor.setAttribute("href", "https://www.linkedin.com/in/danish-chouhan-623aaa24b/");
+            linkedinAnchor.innerText = "LINKEDIN";
+            const emailAnchor = document.createElement("a");
+            emailAnchor.setAttribute("href", "https://mail.google.com/mail/u/0/?fs=1&tf=cm&source=mailto&to=danishchouhan41@gmail.com");
+            emailAnchor.innerText = "E-Mail";
+            const twitterAnchor = document.createElement("a");
+            twitterAnchor.setAttribute("href", "https://twitter.com/Danish_chouhan0");
+            twitterAnchor.innerText = "Twitter";
+            const instagramAnchor = document.createElement("a");
+            instagramAnchor.setAttribute("href", "https://www.instagram.com/danishchouhan_06/");
+            instagramAnchor.innerText = "INSTAGRAM";
+            detailsDiv.appendChild(resumeAnchor);
+            detailsDiv.appendChild(linkedinAnchor);
+            detailsDiv.appendChild(emailAnchor);
+            detailsDiv.appendChild(twitterAnchor);
+            detailsDiv.appendChild(instagramAnchor);
+
+            firstIntroDiv.appendChild(introDiv);
+            firstIntroDiv.appendChild(detailsDiv);
+
+            const secondIntroDiv = document.createElement("div");
+            secondIntroDiv.setAttribute("class", "secondIntro");
+
+            const educationDiv = document.createElement("div");
+            educationDiv.setAttribute("class", "education");
+            const educationP = document.createElement("p");
+            educationP.innerText = "EDUCATION";
+            const arrow1 = document.createElement("p");
+            arrow1.setAttribute("class", "arrow");
+            arrow1.innerText = "→";
+            educationDiv.appendChild(educationP);
+            educationDiv.appendChild(arrow1);
+
+            const detailingDiv = document.createElement("div");
+            detailingDiv.setAttribute("class", "Detailing");
+            const moulanaP = document.createElement("p");
+            moulanaP.innerText = "Moulana azad University Jodhpur";
+            const worksDiv = document.createElement("div");
+            worksDiv.setAttribute("class", "works");
+            const dreamPotentialP1 = document.createElement("p");
+            dreamPotentialP1.innerText = "Dreampotential";
+            const dreamPotentialP2 = document.createElement("p");
+            dreamPotentialP2.innerText = "Full Stack";
+            const dreamPotentialP3 = document.createElement("p");
+            dreamPotentialP3.innerText = "2022-23";
+            worksDiv.appendChild(dreamPotentialP1);
+            worksDiv.appendChild(dreamPotentialP2);
+            worksDiv.appendChild(dreamPotentialP3);
+            detailingDiv.appendChild(moulanaP);
+            detailingDiv.appendChild(worksDiv);
+
+            const workDiv = document.createElement("div");
+            workDiv.setAttribute("class", "Work");
+            const arrow2 = document.createElement("p");
+            arrow2.setAttribute("class", "arrow");
+            arrow2.innerText = "←";
+            const workP = document.createElement("p");
+            workP.innerText = "WORK";
+            workDiv.appendChild(arrow2);
+            workDiv.appendChild(workP);
+
+            secondIntroDiv.appendChild(educationDiv);
+            secondIntroDiv.appendChild(detailingDiv);
+            secondIntroDiv.appendChild(workDiv);
+
+            const data2Div = document.createElement("div");
+            data2Div.setAttribute("class", "data2");
+
+            const education2Div = document.createElement("div");
+            education2Div.setAttribute("class", "education2");
+            const arrow3 = document.createElement("p");
+            arrow3.setAttribute("class", "arrow");
+            arrow3.innerText = "⤥";
+            education2Div.appendChild(arrow3);
+
+            const detailing2Div = document.createElement("div");
+            detailing2Div.setAttribute("class", "Detailing2");
+            const twelthP = document.createElement("p");
+            twelthP.innerText = "12th Science Maths";
+            const works2Div = document.createElement("div");
+            works2Div.setAttribute("class", "works2");
+            const realTorStatP1 = document.createElement("p");
+            realTorStatP1.innerText = "realTorStat";
+            const realTorStatP2 = document.createElement("p");
+            realTorStatP2.innerText = "Full Stack";
+            const realTorStatP3 = document.createElement("p");
+            realTorStatP3.innerText = "Jan-2023-December-2023";
+            works2Div.appendChild(realTorStatP1);
+            works2Div.appendChild(realTorStatP2);
+            works2Div.appendChild(realTorStatP3);
+            detailing2Div.appendChild(twelthP);
+            detailing2Div.appendChild(works2Div);
+
+            const work2Div = document.createElement("div");
+            work2Div.setAttribute("class", "Work2");
+            const arrow4 = document.createElement("p");
+            arrow4.setAttribute("class", "arrow");
+            arrow4.innerText = "⤦";
+            work2Div.appendChild(arrow4);
+
+            data2Div.appendChild(education2Div);
+            data2Div.appendChild(detailing2Div);
+            data2Div.appendChild(work2Div);
+
+            const data3Div = document.createElement("div");
+            data3Div.setAttribute("class", "data3");
+
+            const skillsDiv = document.createElement("div");
+            skillsDiv.setAttribute("class", "skills");
+            const skillsP = document.createElement("p");
+            skillsP.innerText = "Skills";
+            const arrow5 = document.createElement("p");
+            arrow5.setAttribute("class", "arrow");
+            arrow5.innerText = "→";
+            skillsDiv.appendChild(skillsP);
+            skillsDiv.appendChild(arrow5);
+
+            const detailing3Div = document.createElement("div");
+            detailing3Div.setAttribute("class", "Detailing3");
+            const skillsText = document.createElement("p");
+            skillsText.innerText = "HTML5, CSS3, FlexBox, Grid, Bootstrap, TailWind, JavaScript, NodeJs, Express, Mysql, sql, MongoDB, SQlite";
+            detailing3Div.appendChild(skillsText);
+
+            data3Div.appendChild(skillsDiv);
+            data3Div.appendChild(detailing3Div);
+
+            const previousDiv = document.createElement("div");
+            previousDiv.setAttribute("class", "Privius");
+            const previousLink = document.createElement("a");
+            previousLink.setAttribute("href", "../index.html");
+            previousLink.innerText = "↖ EXP";
+            previousDiv.appendChild(previousLink);
+
+            main.appendChild(imgsDiv);
+            main.appendChild(firstIntroDiv);
+            main.appendChild(secondIntroDiv);
+            main.appendChild(data2Div);
+            main.appendChild(data3Div);
+            main.appendChild(previousDiv);
+
+            document.body.appendChild(main);
+
+        }
+    }
+
+    adjustLayout();
+    window.addEventListener("resize", adjustLayout);
+</script>
+
 </html>
